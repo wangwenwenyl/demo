@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+	.spinner{
+		width:100px;
+		height:100px;
+		background-color:#333;
+		margin:100px auto;
+		animation:sk-rotateplane 3.2s infinite ease-in-out;
+	}
+	@-webkit-keyframes sk-rotateplane{
+		0%{
+			transform:perspective{120px}
+		}
+		50%{
+			transform:perspective(120px) rotateY(180deg)
+		}
+		100%{
+			transform:perspective(120px) rotateY(180deg) rotateX(180deg)
+		}
+	}
+  </style>
+ </head>
+ <body>
+	<div class='spinner'>
+		
+	</div>
+ </body>
+</html>

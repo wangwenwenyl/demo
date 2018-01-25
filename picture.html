@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <script src='js/jquery-1.11.3.js'></script>
+  <title>Document</title>
+  <style>
+		.img1{
+			
+		}
+		.img2{
+			margin-left:220px;
+		}
+		.img3{
+			margin-left:440px;
+		}
+		div{
+			position:relative;
+		}
+		img{
+			position:absolute;
+		}
+		.active1{
+			z-index:100;
+		}
+		.active2{
+			z-index:90;
+		}
+		.active3{
+			z-index:80;
+		}
+  </style>
+ </head>
+ <body >
+	<div>
+		<img class='img1'src='image/1.jpg' style='border-radius:100%; width:300px;height:300px;'>
+		<img class='img2'src='image/2.jpg' style='border-radius:100%;width:300px;height:300px;'>
+		<img class='img3'src='image/3.jpg' style='border-radius:100%;width:300px;height:300px;'>
+	</div>
+	<script>
+		function show(){
+			$('.img1').mouseover(function(){
+				$('.img1').addClass('active1');
+				$('.img2').addClass('active2');
+				$('.img3').addClass('active3');
+			})
+			$('.img1').mouseout(function(){
+				$('.img1').removeClass('active1');
+				$('.img2').removeClass('active2');
+				$('.img3').removeClass('active3');
+			})
+
+			$('.img2').mouseover(function(){
+				$('.img1').addClass('active2');
+				$('.img2').addClass('active1');
+				$('.img3').addClass('active3');
+			})
+			$('.img2').mouseout(function(){
+				$('.img1').removeClass('active2');
+				$('.img2').removeClass('active1');
+				$('.img3').removeClass('active3');
+			})
+		}
+		show();
+	
+	</script>
+ </body>
+</html>

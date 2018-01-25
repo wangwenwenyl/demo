@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>地图</title>
+	</head>
+	<body>
+	<!-- <div id="allmap"></div> -->
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=Ij4rlelmIwh3UhC64cjwFZE9"></script>
+	<script type="text/javascript">
+	// 百度地图API功能
+	var point = new BMap.Point(116.331398,39.897445);
+	// 创建地址解析器实例
+	var myGeo = new BMap.Geocoder();
+	myGeo.getPoint("朝阳区望京西路48号金域国际", function(point){
+		if (point) {
+			alert('lng______'+point.lng)
+			alert('lat______'+point.lat)
+		}else{
+			alert("您选择地址没有解析到结果!");
+		}
+	}, "北京市");
+</script>
+	</body>
+</html>

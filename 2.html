@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <script src="js/jquery-1.11.3.js"></script>
+  <title>Document</title>
+ </head>
+ <body>
+ 	<form action="" id="biaodan">
+		<input type="text" name="name"/>
+		<input type="text" name="age"/>
+		<input type="text" name="address"/>
+		<input type="text" name="money"/>
+		<input type="button" value="提交" class="button"/>
+	</form>
+	<div class="content">
+
+	</div>
+	<script>
+		$(".button").click(function(){
+			var str=decodeURI($("#biaodan").serialize());
+//			console.log(JSON.parse(str));
+			$(".content").text(str);
+		});
+//		var text = '{"employees":[' +
+//				'{"name":"菜鸟教程","site":"http://www.runoob.com" },' +
+//				'{"name":"Google","site":"http://www.Google.com" },' +
+//				'{"name":"Taobao","site":"http://www.taobao.com" }]}';
+//		obj = JSON.parse(text);
+//		localStorage.setItem("apple",obj);
+//		var data= {"name":"小明","age":"12"};
+		//		var string=JSON.stringify(data);
+		var str = '{"name":"jack"}';
+		var obj = JSON.parse(str);
+		var obj1 = {"name":"jack"};
+		var str1= JSON.stringify(obj1);
+		console.log(obj);
+		console.log(str1);
+		console.log(JSON.parse(str1));
+	</script>
+ </body>
+</html>

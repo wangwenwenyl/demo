@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>display_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<script src="js/jquery-1.11.3.js"></script>
+<style>
+	.box{display: flex;align-items: center;}
+	.box-iterm1,.box-iterm2,.box-iterm3{flex:1;text-align: center;}
+	.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:320px;
+	height:480px;
+}
+.front{background:red;}
+.back{background:blue;}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+		<!-- <div class="box" style="width:400px;height:100px;border:1px solid #aaa">
+			<div class="box-iterm1">立即萨拉粉</div>
+			<div class="box-iterm2">法拉盛觉得</div>
+			<div class="box-iterm3">爱上了饭卡</div>
+		</div> -->
+		<!-- <img src="smalls.jpg" onmouseover="this.src='small.jpg'" onmouseout="this.src='smalls.jpg'"> -->
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div class="flipper">
+				<div class="front">
+					<!-- 前面内容 -->
+				</div>
+				<div class="back">
+					<!-- 背面内容 -->
+				</div>
+			</div>
+		</div>
+</body>
+<script>
+//  var newnode=document.createTextNode("拉上来交电费卡沙发");
+//	document.body.appendChild(newnode);
+    //var n=document.getElementsByClassName("box-iterm1")[0].innerHTML;
+		//n.parentNode.replaceChild(document.createTextNode("[我是王文文]"),n);
+		$(".flipper"). mouseenter(function(){
+			$(this).css("transform","rotateY(180deg)")
+		});
+		$(".flipper").mouseleave(function(){
+			$(this).css("transform","rotateY(0deg)")
+		})
+</script>
+</html>
+			
