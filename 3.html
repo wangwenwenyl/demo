@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>断点调试</title>
   <script src="js/jquery-1.11.3.js"></script>
-  <script src="js/aa.js"></script>
+  <!--<script src="js/aa.js"></script>-->
   <style>
 	.box{
 		width:500px;
@@ -29,12 +29,24 @@
 		})
 	</script> -->
 	<div class="box">
-		
+		<form action="" id="imageform">
+			<img src="" alt="" id="showimg"/>
+			<input type="file" id="btn" />
+		</form>
 	</div>
 
 	<div>开分支测试</div>
 
 	<div>难道我改变了吗?</div>
 	<div>你确实改变了</div>
+	<script>
+		$("#btn").on("change",function(){
+			var imgform=new FormData($("#imageform")[0]);
+			imgform.append("type","image");
+			console.log(imgform);
+		})
+	</script>
+	
+	
  </body>
 </html>
