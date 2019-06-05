@@ -3,15 +3,18 @@ console.log(['1a','2b','3c'].map(parseInt))*/
 
 
 
+
+
+
 let arr=[4,5,1,2,7,6,3];
 let toString={
-	/*ÀûÓÃsort½øÐÐÅÅÐò*/
+	/*ï¿½ï¿½ï¿½ï¿½sortï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	systemSort:function(arr){
 		return arr.sort(function(a,b){
 			return a-b;
 		})
 	},
-	/*Ã°ÅÝÅÅÐò*/
+	/*Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	bubbleSort:function(arr){
 		let len=arr.length,tem;
 		for(let i=0;i<len-1;i++){
@@ -29,7 +32,7 @@ let toString={
 
 let arr1=[8,9,6,7,4,5,1,2,3];
 
-/*µÝ¹é·½·¨*/
+/*ï¿½Ý¹é·½ï¿½ï¿½*/
 function fib(n){
 	if(n<=2){
 		return 1;
@@ -39,7 +42,7 @@ function fib(n){
 	}
 }
 
-/*ÓÃÑ­»·*/
+/*ï¿½ï¿½Ñ­ï¿½ï¿½*/
 
 function fib2(n){
 	if(n<2){
@@ -50,7 +53,7 @@ function fib2(n){
 	}
 }
 
-/*ÓÃsetTimeoutÊµÏÖsetInterverµÄÐ§¹û*/
+/*ï¿½ï¿½setTimeoutÊµï¿½ï¿½setInterverï¿½ï¿½Ð§ï¿½ï¿½*/
 var  num=1;
 var img=setTimeout(function(){
 		num++;
